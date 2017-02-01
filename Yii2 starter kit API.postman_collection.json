@@ -1,0 +1,377 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Yii2 starter kit API",
+		"_postman_id": "f9d40c8c-acf5-8244-dbee-960903e96e9c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Articles",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Articles by slug",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/article/search?slug=id-voluptas-ipsum-non-mollitia-magni",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer TCZvUmB4m4VO2VNts9vqyysayouu3o8wbSphHVK3",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Get articles with the  slug defined in the GET params"
+					},
+					"response": []
+				},
+				{
+					"name": "Create article",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/articles",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 5,\n    \"slug\": \"new-slug\",\n    \"category_id\": 1,\n    \"title\": \"Miss\",\n    \"body\": \"Suscipit cum eos magnam ut. Adipisci doloribus tempore eligendi. Sit ratione expedita perferendis odit non.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update article",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/articles/11",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"slug\": \"old-slug\",\n    \"category_id\": 1,\n    \"title\": \"Miss\",\n    \"body\": \"Suscipit cum eos magnam ut. Adipisci doloribus tempore eligendi. Sit ratione expedita perferendis odit non.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Article",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/articles/11",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Article by ID",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/articles/6",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/articles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer piIRE1S4G8OEaNRJ3XeqLE0EscxYt1y2Ya0Duwrz",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization",
+			"description": "",
+			"item": [
+				{
+					"name": "Get OAuth 2.0 Password Credentials Grant",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/authorization/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"client_name\",\n    \"client_secret\": \"client_secret\",\n    \"username\": \"webmaster\",\n    \"password\": \"webmaster\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Invalidate OAuth token",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/authorization/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"client_name\",\n    \"client_secret\": \"client_secret\",\n    \"username\": \"webmaster\",\n    \"password\": \"webmaster\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pages",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Pages by slug",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/page/search?slug=id-voluptas-ipsum-non-mollitia-magni",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer TCZvUmB4m4VO2VNts9vqyysayouu3o8wbSphHVK3",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "<p>Get Pages with the  slug defined in the GET params</p>"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Page",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update page",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/pages/11",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete page",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/pages/11",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get page by ID",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/pages/6",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All pages",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/pages",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer evrbzSoieHPaAVqqWJ5A7rZMSxEtl77oJrysnlLw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Create User copy",
+					"request": {
+						"url": "http://api.yii2-starter-kit.dev/v1/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer wpmxIJ0vCVtmVunNiRFuNyEP8hI2sahnQNY5wuzX",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sxx22A@iDDDA.coam\",\n    \"name\":\"ROMINA SUAREZ\",\n    \"username\": \"2xAsa2aaaai2A\",\n    \"password\":\"PEPAEPiEEP\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
