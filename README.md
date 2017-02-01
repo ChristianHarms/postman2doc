@@ -5,13 +5,13 @@ simple script to generate an API document from the Postman collectionv2 json fil
 
 ## todo
 
-* we read post-body allways from request.raw attribute as json
-  ```javascript
-  "body": {
-              "mode": "raw",
-              "raw": "{\"pin\":\"1111\"}"
-          }
-  ```
+* we read post-body allways from request.body.raw attribute as json
+```
+"body": {
+          "mode": "raw",
+          "raw": "{\"pin\":\"1111\"}"
+      }
+```
 * pretty print response-body for json / xml
 * hard-coded Header list for export
 * no Cookies export - feel free to add it
