@@ -1,12 +1,20 @@
 
 #
 
-simple script to generate an API document from the Postman collection json file.
+simple script to generate an API document from the Postman collectionv2 json file.
 
 ## todo
 
 * we read post-body allways from request.raw attribute as json
+  ```javascript
+  "body": {
+              "mode": "raw",
+              "raw": "{\"pin\":\"1111\"}"
+          }
+  ```
 * pretty print response-body for json / xml
+* hard-coded Header list for export
+* no Cookies export - feel free to add it
 
 ## get all tools
 
@@ -25,9 +33,9 @@ for getting an postman collection
 * start postman interceptor + activate
 * start postman + sync interceptor
 * capture request in postman history
-* take your requests to a collection (organize it in subfolder=
-* save response data on every request separate (in postman)
-* export collection als postman-collection 2.0 json file
+* save requests to a collection (organize it in subfolder)
+* re-run and save response data on every request separate (in postman)
+* export collection als postman-collection v2.0 json file
 
 ## Generate documentation
 
